@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Add</title>
+    <style>
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center
+        }
+
+        h1 {
+            margin: 5rem;
+            margin-bottom: 2rem;
+            text-align : center;
+            font-size: 3.5rem
+        }
+
+        form {
+            width: 50%;
+        }
+
+        .input {
+            padding: .5rem;
+            margin: .25rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .input label {
+            font-size: 1.25rem;
+        }
+
+        .input input {
+            width: 50%;
+            font-size: 1rem;
+            padding: .5rem;
+            border: none;
+            border-bottom: 1.5px solid black;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a {
+            background-color: #123456;
+            padding: .35rem 1rem;
+            border-radius: 100px;
+            color : rgb(0, 0, 0);
+            text-decoration: none;
+            margin: 2rem;
+            font-size: 1.15rem;
+            margin-bottom : 0;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.178);
+        }
+
+        p {
+            opacity: .5;
+            font-style: italic;
+        }
+
+        #update {
+            background-color: #c8fdff;
+        }
+
+        #cancel {
+            background-color: #ffc8c8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Student Edit</h1>
+
+    <form action="">
+
+        <div class="input">
+            <label for="name">Name</label>
+            <input type="text" placeholder="Name..." name="name" value="alice">
+        </div>
+        <div class="input">
+            <label for="name">Email</label>
+             <input type="email" placeholder="Email..." name="email" value="alice@gmail.com">
+        </div>
+        <div class="input">
+            <label for="name">Course</label>
+             <input type="text" placeholder="E.g BSCS" name="course" value="BSCS">
+
+        </div>
+        <div class="input">
+            <label for="name">Year</label>
+            <input type="text" placeholder="E.g 1" name="year" value="2">
+        </div>
+
+    </form>
+
+    <div class="buttons">
+
+        <a id="update">
+            Update
+        </a>
+        <a id="cancel" href="/index">
+            Cancel
+        </a>
+    </div>
+    <p>Currently Does not Work D:</p>
+
+</body>
+</html>

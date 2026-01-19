@@ -7,11 +7,33 @@
     <title>Student Add</title>
     <style>
 
+        * {
+            box-sizing: border-box
+        }
+
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 2.5rem;
+            width: 100%;
+            box-shadow: 5px 5px 15px #a7a7a7;
+        }
+
+        ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        li {
+            list-style-type: none
         }
 
         h1 {
@@ -65,7 +87,8 @@
 </head>
 <body>
 
-    <h1>Student Add</h1>
+    <x-navbar></x-navbar>
+    <x-title>Student Add</x-title>
 
     <form action="">
 

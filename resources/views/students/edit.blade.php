@@ -7,11 +7,33 @@
     <title>Student Add</title>
     <style>
 
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 2.5rem;
+            width: 100%;
+            box-shadow: 5px 5px 15px #a7a7a7;
+        }
+
+        ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        li {
+            list-style-type: none
         }
 
         h1 {
@@ -51,7 +73,7 @@
             align-items: center;
         }
 
-        a {
+        #update, #cancel {
             background-color: #123456;
             padding: .35rem 1rem;
             border-radius: 100px;
@@ -80,29 +102,36 @@
 </head>
 <body>
 
-    <h1>Student Edit</h1>
+    <x-navbar></x-navbar>
+    <x-title>Student Edit</x-title>
 
-    <form action="">
+    {{-- Static Way Before --}}
+    {{-- <form action="">
 
         <div class="input">
-            <label for="name">Name</label>
-            <input type="text" placeholder="Name..." name="name" value="alice">
-        </div>
-        <div class="input">
-            <label for="name">Email</label>
-             <input type="email" placeholder="Email..." name="email" value="alice@gmail.com">
-        </div>
-        <div class="input">
-            <label for="name">Course</label>
-             <input type="text" placeholder="E.g BSCS" name="course" value="BSCS">
-
-        </div>
-        <div class="input">
-            <label for="name">Year</label>
-            <input type="text" placeholder="E.g 1" name="year" value="2">
+            <label>Name</label>
+            <input type="text" name="name" value="{{ $student['name'] }}">
         </div>
 
-    </form>
+        <div class="input">
+            <label>Email</label>
+            <input type="email" name="email" value="{{ $student['email'] }}">
+        </div>
+
+        <div class="input">
+            <label>Course</label>
+            <input type="text" name="course" value="{{ $student['course'] }}">
+        </div>
+
+        <div class="input">
+            <label>Year</label>
+            <input type="text" name="year" value="{{ $student['year'] }}">
+        </div>
+
+    </form> --}}
+
+    {{-- Component Way Now --}}
+    <x-form-edit :student="$student" />
 
     <div class="buttons">
 

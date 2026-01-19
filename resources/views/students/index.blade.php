@@ -7,12 +7,32 @@
 
     <style>
 
+
+
         body {
-            padding: 2rem;
+            padding: 0rem 2rem;
             display: flex;
             flex-direction: column;
             gap: 2rem;
             align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0rem 2.5rem;
+            width: 100%;
+            box-shadow: 5px 5px 15px #a7a7a7;
+        }
+
+        ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        li {
+            list-style-type: none
         }
 
         h1 {
@@ -93,7 +113,8 @@
 </head>
 <body>
 
-<h1>Student List</h1>
+<x-navbar></x-navbar>
+<x-title>Student List</x-title>
 
 <table>
     <tr>
@@ -108,8 +129,8 @@
             <td>{{$sample['course']}}</td>
             <td style="text-align: center">{{$sample['year']}}</td>
             <td class="action">
-                <a class="view" href="/show/student">View</a>
-                <a class="edit" href="/edit">Edit</a>
+                <a class="view" href="/show/student/{{ $sample['id'] }}">View</a>
+                <a class="edit" href="/edit/{{ $sample['id'] }}">Edit</a>
             </td>
         </tr>
         @endforeach

@@ -59,7 +59,7 @@
     </style>
 </head>
 <body>
-    <nav>
+    {{-- <nav>
         <div>
             SPortal 📚📕
         </div>
@@ -68,9 +68,11 @@
             <li><a href="/index">Students</a></li>
             <li><a href="/add">Add</a></li>
         </ul>
-    </nav>
+    </nav> --}}
 
-    <h1>Student Portal</h1>
+    <x-navbar></x-navbar>
+    <x-title>Student Portal</x-title>
+
     <p><span>"</span> In the student's portal, you'll find not only academic resources but also the tools to mold character, build discipline, and inspire growth. <span>"</span></p>
 </body>
 </html>
